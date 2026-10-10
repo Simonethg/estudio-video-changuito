@@ -1,0 +1,26 @@
+{
+  "name": "editor-video-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plantilla del curso de AcademiaQA: reels 9:16, intros de YouTube 16:9 y promos animados con Remotion, editados junto a Cursor y Grok Bot.",
+  "scripts": {
+    "estudio": "remotion studio",
+    "reel": "remotion render Reel salida/reel.mp4",
+    "intro": "remotion render IntroYouTube salida/intro-youtube.mp4",
+    "promo": "remotion render Promo salida/promo.mp4",
+    "promo-vertical": "remotion render PromoVertical salida/promo-vertical.mp4",
+    "portada": "remotion still Promo salida/portada.png --frame=60",
+    "prueba": "remotion still Reel salida/prueba-reel.png --frame=45"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "@remotion/fonts": "4.0.534",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

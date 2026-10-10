@@ -1,0 +1,40 @@
+---
+description: Reglas del proyecto de edición de video para personas que no programan
+alwaysApply: true
+---
+
+# Instrucciones para el agente de IA (Cursor o Grok Bot)
+
+Este proyecto es de una persona que está aprendiendo a editar video con IA y **no sabe programar**.
+
+## Cómo hablar
+- Responde siempre en español neutro, con palabras simples y frases cortas.
+- Antes de un cambio grande, explica en 2 o 3 líneas qué vas a hacer y por qué.
+- Al terminar, di qué archivo cambiaste, cómo ver el resultado (vista previa o render) y cuál es el siguiente paso.
+- Si algo falla, explica el error en una frase simple y propone la solución.
+
+## Cómo trabajar (cuidando el consumo del plan)
+- Haz cambios chicos y concretos. Toca solo los archivos necesarios.
+- Para videos, audios e imágenes: trabaja con los **archivos**, nunca pegues su contenido en el chat.
+- Para transcripciones largas: guárdalas en un archivo y lee solo la parte que necesitas.
+- Prueba con un **cuadro** (`npx remotion still ...`) o un tramo corto (`--frames=0-90`) antes de renderizar el video completo.
+- Usa herramientas locales y gratuitas: FFmpeg, Remotion y Whisper local. Evita servicios pagos de generación de video o voz.
+
+## Mapa del proyecto
+- `src/marca.ts`: nombre, colores, usuario, logo y fuente de la marca.
+- `src/plantillas/Reel.tsx`: reel/short vertical 9:16 con gancho, subtítulos, música y cierre.
+- `src/plantillas/IntroYouTube.tsx`: intro de 5 segundos para YouTube 16:9.
+- `src/plantillas/Promo.tsx`: promo animado de 10 segundos (16:9, 9:16 y 1:1).
+- `src/Root.tsx`: lista de videos (composiciones) con tamaño, fps, duración y textos.
+- `src/datos/subtitulos.json`: subtítulos del reel `{ desde, hasta, texto }` en segundos.
+- `public/`: archivos que usan los videos (clips, música, logo, fuentes).
+- `herramientas/`: recetas de FFmpeg y conversor de subtítulos SRT a JSON.
+- `salida/`: videos renderizados (no se suben a GitHub).
+- `material-crudo/`: clips originales pesados (no se suben a GitHub).
+
+## Reglas de video
+- Reels/shorts: 1080x1920, 30 fps, H.264 + AAC, MP4.
+- YouTube: 1920x1080, 30 fps (o los fps del material), H.264 + AAC, MP4.
+- Subtítulos dentro de la "zona segura" (lejos de los bordes de arriba y abajo).
+- Música: solo con licencia libre o propia. Volumen de música bajo la voz (0.08 a 0.15).
+- Nunca borres archivos de `material-crudo/`. Trabaja siempre sobre copias.

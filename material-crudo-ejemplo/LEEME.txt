@@ -1,0 +1,7 @@
+Copia aquí tus clips originales dentro de una carpeta llamada "material-crudo"
+(al lado de esta). Esa carpeta NO se sube a GitHub porque los videos pesan mucho.
+Guarda siempre una copia de seguridad de tus originales en tu disco o en Drive.
+
+Nombres recomendados (sin espacios ni tildes):
+  2026-10-08_toma01_presentacion.mp4
+  2026-10-08_toma02_producto.mp4

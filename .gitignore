@@ -1,0 +1,7 @@
+node_modules/
+salida/
+.DS_Store
+Thumbs.db
+*.log
+# Material crudo pesado: guárdalo fuera del repo o en Drive
+material-crudo/
